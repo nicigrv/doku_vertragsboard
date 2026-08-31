@@ -1,57 +1,97 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  emoji: string;
   description: ReactNode;
+  to?: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Drei Betriebsmodi',
+    emoji: '\u{1F310}',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Standard-Server, eigener PHP-/MariaDB-Server oder rein lokal ueber
+        OneDrive &ndash; ein Setup-Wizard fuehrt beim ersten Start durch die
+        Auswahl.
       </>
     ),
+    to: '/betriebsmodi/uebersicht',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Multi-User & Live-Praesenz',
+    emoji: '\u{1F465}',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Mehrere Personen arbeiten gleichzeitig am selben Space. Praesenz-Anzeige,
+        optimistische Sperren und ein Aktivitaetsprotokoll halten alles konsistent.
       </>
     ),
+    to: '/benutzerhandbuch/live-praesenz',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Konfigurierbar ohne Code',
+    emoji: '\u{2699}',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Prozessschritte, Vertragsarten, Kitas/Kostenstellen und Stammdaten-Felder
+        pflegen Admins direkt im Dashboard &ndash; nichts ist hart im Code hinterlegt.
       </>
     ),
+    to: '/administration/admin-dashboard',
+  },
+  {
+    title: 'PDF-Export & Vertragsauftrag',
+    emoji: '\u{1F4C4}',
+    description: (
+      <>
+        Reports als PDF und automatisches Ausfuellen der Original-
+        Vertragsauftrags-Formulare des Bistums Limburg via AcroForm.
+      </>
+    ),
+    to: '/benutzerhandbuch/pdf-export',
+  },
+  {
+    title: 'Optionales Web-Portal',
+    emoji: '\u{1F5A5}',
+    description: (
+      <>
+        Browserbasiertes Admin-Portal mit Superadmin-Rolle, Impersonate,
+        Notifications und Audit-Log. Reines PHP, kein Composer noetig.
+      </>
+    ),
+    to: '/portal/uebersicht',
+  },
+  {
+    title: 'Auto-Update',
+    emoji: '\u{1F504}',
+    description: (
+      <>
+        Der Client prueft die GitHub-Releases-API, laedt den passenden Installer
+        und startet ihn detached &ndash; ohne administrative Rechte.
+      </>
+    ),
+    to: '/architektur/auto-update',
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, emoji, description, to}: FeatureItem) {
+  const content = (
+    <div className={styles.featureCard}>
+      <div className={styles.featureEmoji} aria-hidden="true">{emoji}</div>
+      <Heading as="h3">{title}</Heading>
+      <p>{description}</p>
+    </div>
+  );
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      {to ? <Link to={to} className={styles.featureLink}>{content}</Link> : content}
     </div>
   );
 }

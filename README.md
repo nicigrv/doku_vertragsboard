@@ -1,43 +1,32 @@
-# Website
+# Vertragsboard - Dokumentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Docusaurus-Projekt fuer die Dokumentation der Vertragsboard-Anwendung
+(Windows-Desktop, PHP-Backend, Web-Admin-Portal).
 
-## Installation
+Der Anwendungs-Quellcode selbst liegt in `C:\Users\nicol\Documents\boni_v15`
+und wird nicht committet; oeffentlich verfuegbar sind nur die Releases unter
+<https://github.com/nicigrv/vertragsboard>.
+
+## Lokal entwickeln
 
 ```bash
 npm install
-```
-
-**Note**: feel free to use the package manager of your choice.
-
-## Local Development
-
-```bash
 npm run start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Startet einen Dev-Server unter <http://localhost:3000>. Aenderungen an
+Markdown-/MDX-Dateien werden live nachgeladen.
 
-## Build
+## Statische Site bauen
 
 ```bash
 npm run build
+npm run serve
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Aufbau
 
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true npm run deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- `docs/` &ndash; die eigentliche Dokumentation (Sidebar-Reihenfolge siehe `sidebars.ts`).
+- `src/pages/index.tsx` &ndash; Startseite.
+- `src/components/HomepageFeatures/` &ndash; Feature-Kacheln auf der Startseite.
+- `docusaurus.config.ts` &ndash; Site-Konfiguration.

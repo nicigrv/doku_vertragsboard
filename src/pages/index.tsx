@@ -17,11 +17,21 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className={styles.heroLead}>
+          Windows-Desktop-Anwendung fuer die Verwaltung von Einstellungs- und
+          Vertragsprozessen. Wahlweise mit zentralem PHP-/MariaDB-Server, eigenem
+          Server oder rein lokal via OneDrive.
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/">
+            Dokumentation lesen
+          </Link>
+          <Link
+            className="button button--outline button--secondary button--lg"
+            href="https://github.com/nicigrv/vertragsboard/releases/latest">
+            Download
           </Link>
         </div>
       </div>
@@ -33,8 +43,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} – Dokumentation`}
+      description="Ausfuehrliche Dokumentation zur Vertragsboard-Desktop-App, zum PHP-Backend und zum Web-Admin-Portal.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
