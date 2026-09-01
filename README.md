@@ -7,7 +7,7 @@ Der Anwendungs-Quellcode selbst liegt in `C:\Users\nicol\Documents\boni_v15`
 und wird nicht committet; oeffentlich verfuegbar sind nur die Releases unter
 <https://github.com/nicigrv/vertragsboard>.
 
-## Lokal entwickeln
+## Lokal entwickeln  
 
 ```bash
 npm install
