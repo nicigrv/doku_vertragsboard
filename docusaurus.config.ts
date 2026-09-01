@@ -18,7 +18,13 @@ const config: Config = {
   projectName: 'vertragsboard',
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    format: 'detect',
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: {
     defaultLocale: 'de',

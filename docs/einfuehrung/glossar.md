@@ -75,7 +75,7 @@ Zentrale Begriffe, die in dieser Dokumentation immer wieder auftauchen.
 
 **Standard-Server**
 : Vorkonfigurierte Basis-URL &ndash; die zentral gehostete Instanz von
-  Nicolas Greulich unter <https://backend.nicolasgreulich.de>.
+  Nicolas Greulich unter [backend.nicolasgreulich.de](https://backend.nicolasgreulich.de).
 
 **Eigener Server**
 : Der Kunde installiert die `Vertragsboard-PHP-Backend.zip` auf seinem

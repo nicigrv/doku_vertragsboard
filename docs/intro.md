@@ -1,5 +1,4 @@
 ---
-slug: /
 title: Vertragsboard
 sidebar_position: 1
 ---
@@ -12,7 +11,7 @@ Personen arbeiten gleichzeitig &ndash; entweder gemeinsam ueber einen
 zentralen PHP-/MariaDB-Server oder lokal via OneDrive.
 
 - **Herausgeber:** Nicolas Greulich &middot; [greylo.de](https://greylo.de) &middot; nicolas.greulich@greylo.de
-- **Repository / Releases:** <https://github.com/nicigrv/vertragsboard>
+- **Repository / Releases:** [github.com/nicigrv/vertragsboard](https://github.com/nicigrv/vertragsboard)
 - **Aktuelle Version:** siehe [Release-Seite](https://github.com/nicigrv/vertragsboard/releases/latest)
 
 ## Fuer wen ist diese Dokumentation?

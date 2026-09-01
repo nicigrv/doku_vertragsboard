@@ -7,7 +7,7 @@ sidebar_position: 2
 
 Der bequemste Weg fuer Kunden, die keinen eigenen Server betreiben
 wollen. Der Client verbindet sich mit der zentralen Instanz, die
-Nicolas Greulich unter <https://backend.nicolasgreulich.de> betreibt.
+Nicolas Greulich unter [backend.nicolasgreulich.de](https://backend.nicolasgreulich.de) betreibt.
 
 ## Voraussetzungen
 
@@ -18,7 +18,7 @@ Nicolas Greulich unter <https://backend.nicolasgreulich.de> betreibt.
 
 1. Vertragsboard starten &rarr; Setup-Wizard.
 2. **"Standard-Server (Cloud)"** waehlen.
-3. Basis-URL <https://backend.nicolasgreulich.de> ist vorbelegt.
+3. Basis-URL `https://backend.nicolasgreulich.de` ist vorbelegt.
 4. **Space-Code**, **Benutzername** und **Passwort** eingeben.
 5. Fertig &ndash; das Hauptfenster oeffnet sich.
 

@@ -19,7 +19,7 @@ ausfuehren, im Setup-Wizard "Standard-Server" waehlen und anmelden.**
 
 1. **Web-Installer laden** (klein, laedt die eigentliche EXE bei Bedarf nach):
 
-   <https://github.com/nicigrv/vertragsboard/releases/latest/download/Vertragsboard-Installer.zip>
+   [Vertragsboard-Installer.zip](https://github.com/nicigrv/vertragsboard/releases/latest/download/Vertragsboard-Installer.zip)
 
 2. **ZIP entpacken**, `Vertragsboard-WebSetup.exe` starten, Installation bestaetigen.
 
@@ -43,7 +43,7 @@ Danach oeffnet sich das Hauptfenster mit der Vorgangsliste.
 
 ## Erste Anmeldung
 
-- **Standard-Server:** Basis-URL <https://backend.nicolasgreulich.de> ist vorbelegt. Zugangsdaten (Username + Passwort + Space-Code) erhaeltst du vom Betreiber.
+- **Standard-Server:** Basis-URL `https://backend.nicolasgreulich.de` ist vorbelegt. Zugangsdaten (Username + Passwort + Space-Code) erhaeltst du vom Betreiber.
 - **Eigener Server:** Basis-URL des eigenen Backends eintragen (z. B. `https://mein-server.de/vertragsboard/`).
 - **Lokal:** Datenordner waehlen (Vorschlag: `<OneDrive>\Vertragsboard`), Preset waehlen (Standard-Kita oder Leer), Admin-User anlegen.
 

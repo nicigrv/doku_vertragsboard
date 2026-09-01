@@ -54,7 +54,7 @@ liegen koennen (Spalte `space_id`). Beim eigenen Server ist typischerweise
 
 Wer selbst Kunden hosten will, kann `ALLOW_REGISTRATION = true` in
 `config.php` setzen. Dann duerfen Clients ueber `space.register` neue
-Spaces anlegen (siehe [API / Endpoints](../api/endpoints.md#spaceregister)).
+Spaces anlegen (siehe [API / Endpoints](../api/endpoints.md)).
 
 ## Portal aktivieren
 
