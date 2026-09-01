@@ -25,21 +25,12 @@ jobs:
       - name: Build Website
         run: npm run build
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          security: loose
-          local-dir: ./build/
-          server-dir: ./
-          timeout: 60000
-          log-level: verbose
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
+      - name: FTP Debug
+        continue-on-error: true
+        run: |
+          echo "--- Port 21 erreichbar? ---"
+          timeout 10 bash -c "cat < /dev/null > /dev/tcp/${{ secrets.FTP_SERVER }}/21" \
+            && echo "OK" || echo "BLOCKIERT"
+          echo "--- PASV-Antwort ---"
+          curl -v --ssl-reqd --ftp-pasv \
+            --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD
