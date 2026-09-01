@@ -32,5 +32,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
-          server-dir: /vertragsboard .nicolasgreulich.de/  # Ändere zu deinem Zielordner (z.B. /httpdocs/ oder /www/)
+          server-dir: //  # Ändere zu deinem Zielordner (z.B. /httpdocs/ oder /www/)
           dangerous-clean-slate: false  # Keine bestehenden Dateien lösch
